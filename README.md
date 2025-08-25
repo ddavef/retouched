@@ -33,3 +33,7 @@ The project logo uses the font ["Cosimo"](https://fontstruct.com/fontstructions/
 licensed under [Creative Commons Attribution 3.0 Unported](https://creativecommons.org/licenses/by/3.0/).  
 
 This project uses the [Py3AMF](https://github.com/StdCarrot/Py3AMF) Python library by StdCarrot, licensed under the [MIT License](https://github.com/StdCarrot/Py3AMF/blob/master/LICENSE.txt).  
+
+## Troubleshooting
+Make sure your firewall is not blocking ports 8088 and 8080 (allow them in your firewall or allow Python and Flash Player).    
+Make sure no other app is using ports 8088 and 8080, close them if so.    
