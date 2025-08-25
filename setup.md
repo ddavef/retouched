@@ -67,13 +67,13 @@ Do not put any other games.**
 Example:
 
 #### Windows:    
-`C:\Users\User\Desktop\Touchy`
+`C:\Users\User\Desktop\TouchyGames`
 
 #### Linux:    
-`/home/user/Desktop/Touchy`
+`/home/user/Desktop/TouchyGames`
 
 #### macOS:    
-`/Users/User/Desktop/Touchy`
+`/Users/User/Desktop/TouchyGames`
 
 # Step 3
 
@@ -117,6 +117,38 @@ Note: You may need to allow the installation in the Play Protect dialog if it co
 
 ## Redirecting the flash games and Touchy to use the self-hosted server
 
+### Easy Way
+Try the modified version of the app `Touchy.1.7-modified.apk` and install it according to Step 3.  
+(delete the original before installing the modified one)  
+(modify the commands to accomodate the different name)  
+Change your computer's private IP address to `192.168.1.115` (depends on your OS, there are many tutorials online).
+
+Then modify the hosts file on your computer:
+
+#### Windows:
+
+`C:\Windows\System32\drivers\etc\hosts`
+
+#### Linux:
+
+`/etc/hosts`
+
+#### macOS:
+
+`/private/etc/hosts`
+
+Add the following lines to the end of the file:
+
+`192.168.1.115 registry.monkeysecurity.com`  
+`192.168.1.115 playbrassmonkey.com`
+
+Then go to Step 5.
+
+### Hard Way
+
+The hard way involves redirecting the default domains on your router.  
+If you have a router capable to do this, you don't need to use the modified app.  
+
 Firstly, find out your computer's private IP address.   
 
 #### Windows:
@@ -141,39 +173,7 @@ You need to redirect the following domains to your computer's private IP address
 `registry.monkeysecurity.com`   
 `playbrassmonkey.com`
 
-The best way to do this would be to redirect the domains router-wide.   
-The details depend on your router. 
-If your router cannot redirect domains, running a custom DNS server and doing a rewrite *might* work.
-
-At least on PC, it can be done by editing the hosts file.
-
-**Alternatively, try the modified version of the app on the archive which connects to 192.168.1.115 instead.**  
-**Change your computer's IP address to 192.168.1.115, restart and run the server.**  
-
-**Note: If you can redirect the domains from your router, you do not need to do the following steps.**
-
-### On your computer, edit the hosts file as administrator:
-
-#### Windows:
-
-`C:\Windows\System32\drivers\etc\hosts`
-
-#### Linux:
-
-`/etc/hosts`
-
-#### macOS:
-
-`/private/etc/hosts`
-
-Add the following lines to the end of the file:
-
-`your_private_ip registry.monkeysecurity.com`  
-`your_private_ip playbrassmonkey.com`
-
-**If you are using the modified app, then you should put 192.168.1.115 as the private IP since your PC needs to be configured for that IP.**  
-
-If your phone is rooted, you can also use a module like bindhosts to redirect the domains on your phone.
+Then go to Step 5.
 
 # Step 5
 
