@@ -29,7 +29,6 @@ Note: On Linux you may need to run:
 ### Windows (CMD/PowerShell)
 `py -m pip install --upgrade pip`  
 `py -m pip install py3amf`  
-`py -m pip install py3amf`
 
 # Step 2
 
@@ -149,7 +148,7 @@ If your router cannot redirect domains, running a custom DNS server and doing a 
 At least on PC, it can be done by editing the hosts file.
 
 **Alternatively, try the modified version of the app on the archive which connects to 192.168.1.115 instead.**  
-**Change your computer's IP address to 192.168.1.115, restart and run the server.**
+**Change your computer's IP address to 192.168.1.115, restart and run the server.**  
 
 **Note: If you can redirect the domains from your router, you do not need to do the following steps.**
 
@@ -171,6 +170,8 @@ Add the following lines to the end of the file:
 
 `your_private_ip registry.monkeysecurity.com`  
 `your_private_ip playbrassmonkey.com`
+
+**If you are using the modified app, then you should put 192.168.1.115 as the private IP since your PC needs to be configured for that IP.**  
 
 If your phone is rooted, you can also use a module like bindhosts to redirect the domains on your phone.
 
