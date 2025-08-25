@@ -148,6 +148,9 @@ If your router cannot redirect domains, running a custom DNS server and doing a 
 
 At least on PC, it can be done by editing the hosts file.
 
+**Alternatively, try the modified version of the app on the archive which connects to 192.168.1.115 instead.**  
+**Change your computer's IP address to 192.168.1.115, restart and run the server.**
+
 **Note: If you can redirect the domains from your router, you do not need to do the following steps.**
 
 ### On your computer, edit the hosts file as administrator:
