@@ -4,7 +4,8 @@
 
 
 # retouched
-A reimplementation of Nitrome Touchy and the BrassMonkey server.
+A reimplementation of Nitrome Touchy and the BrassMonkey server.    
+**This is not an officially supported Ntrome Ltd. or Infrared5 Inc. product.**
 
 ## Download and usage
 **Note: Only possible with Android as of now, unless you can install Touchy on a jailbroken iPhone.**  
