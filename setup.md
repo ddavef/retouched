@@ -121,7 +121,8 @@ Note: You may need to allow the installation in the Play Protect dialog if it co
 Try the modified version of the app `Touchy.1.7-modified.apk` and install it according to Step 3.  
 (delete the original before installing the modified one)  
 (modify the commands to accomodate the different name)  
-Change your computer's private IP address to `192.168.1.115` (depends on your OS, there are many tutorials online).
+Change your computer's private IP address to `192.168.1.115` (depends on your OS, there are many tutorials online).  
+**Make sure your subnet mask is 255.255.255.0**  
 
 Then modify the hosts file on your computer:
 
