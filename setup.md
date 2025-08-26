@@ -139,8 +139,11 @@ Then modify the hosts file on your computer:
 
 Add the following lines to the end of the file:
 
-`192.168.1.115 registry.monkeysecurity.com`  
-`192.168.1.115 playbrassmonkey.com`
+`127.0.0.1 registry.monkeysecurity.com`  
+`127.0.0.1 playbrassmonkey.com`
+
+Setting it to 127.0.0.1 will make the flash games connect to localhost, aka the self-hosted server running on your computer.   
+The modified app will connect to `192.168.1.115` which will also connect to your computer after setting it to that.  
 
 Then go to Step 5.
 
