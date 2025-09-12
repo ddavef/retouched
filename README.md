@@ -4,14 +4,13 @@
 
 
 # retouched
-A reimplementation of Nitrome Touchy and the BrassMonkey server.    
+A recreation of Nitrome Touchy and the BrassMonkey server.    
 **This is not an officially supported Ntrome Ltd. or Infrared5 Inc. product.**
 
 ## Download and usage
 **Note: Only possible with Android as of now, unless you can install Touchy on a jailbroken iPhone.**  
 [Follow the instructions from here](setup.md)    
-As of now, it might be a bit difficult to set it up. Eventually retouched web should be released, but this will take a long time to finish.    
-Retouched web will be a recreation of the Touchy app inside a web browser, which will be platform agnostic (as long as the browser is capable enough).
+As of now, it might be a bit difficult to set it up. Eventually the app should be recreated for modern phones.    
 
 ## Protocol documentation
 Coming soon.
