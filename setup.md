@@ -22,7 +22,7 @@ Run the following commands in your terminal or command prompt.
 `python3 -m pip install --upgrade pip`  
 `python3 -m pip install py3amf`
 
-Note: On Linux you may need to run:
+**Note: On Linux you may need to run:**
 
 `python3 -m pip install py3amf --break-system-packages`  
 
@@ -82,12 +82,11 @@ Example:
 ### Download prerequisites
 
 **Note: If you are installing Touchy on an older phone (Android 12 or lower), you do not need to download the platform tools.    
-Simply install the APK file on your phone.**  
+Simply install the APK file on your phone.**
 
-**Note: If your phone is rooted, you do not need to download the platform tools.    
-Simply running `pm install --bypass-low-target-sdk-block Touchy.1.7.apk` in a root shell should work.** 
+**Note: You will most likely need to modify the app for it to work. Go to Step 4 and come back here once done. Then proceed to Step 5 once the app is installed.**
 
-Download Touchy to your computer from here:    
+Download Touchy to your computer from here (you will need it for Step 4):    
 https://archive.org/details/nitrome-touchy
 
 Download the latest platform tools to your computer from here:   
@@ -108,8 +107,12 @@ Connect your android device to your computer via USB.
 Open a terminal or command prompt in the directory where you extracted the platform tools.
 
 Run the following command:    
-`adb install --bypass-low-target-sdk-block Touchy.1.7.apk `   
-Note: You may need to allow the installation in the Play Protect dialog if it comes up.   
+`adb install --bypass-low-target-sdk-block Touchy.1.7.apk `
+
+**Note: If your phone is rooted, you do not need to download the platform tools.    
+Simply running `pm install --bypass-low-target-sdk-block Touchy.1.7.apk` in a root shell should work.** 
+
+**Note: You may need to allow the installation in the Play Protect dialog if it comes up.**
 
 **Note: On Linux you might need udev rules to allow adb to access your device.**
 
@@ -118,13 +121,32 @@ Note: You may need to allow the installation in the Play Protect dialog if it co
 ## Redirecting the flash games and Touchy to use the self-hosted server
 
 ### Easy Way
-Try the modified version of the app `Touchy.1.7-modified.apk` and install it according to Step 3.  
-(delete the original before installing the modified one)  
-(modify the commands to accomodate the different name)  
-Change your computer's private IP address to `192.168.1.115` (depends on your OS, there are many tutorials online).  
-**Make sure your subnet mask is 255.255.255.0**  
+1. Create the directory `ignore` in the project root directory.
+2. Put `Touchy.1.7.apk` in it (make sure the name is exactly that).
+3. Find out your private IP address[1].
+4. Run `python3 touchy_patcher.py` and put in your private IP when it asks for it.
+5. Install the modified Touchy APK from the `signed` directory in `ignore` according to Step 3.
 
-Then modify the hosts file on your computer:
+[1]
+#### Windows:
+
+Run `ipconfig` in a terminal or command prompt.   
+Look for the `IPv4 Address` entry.   
+
+#### Linux:
+
+Run `ifconfig` in a terminal or command prompt.   
+Look for the `inet` entry.   
+
+#### macOS:
+
+Run `ifconfig` in a terminal or command prompt.   
+Look for the `inet` entry.   
+ 
+It should be something like 192.168.1.100.  
+Make sure the private IP address is from your main network adapter.
+
+**Then modify the hosts file on your computer:**
 
 #### Windows:
 
@@ -143,50 +165,31 @@ Add the following lines to the end of the file:
 `127.0.0.1 registry.monkeysecurity.com`  
 `127.0.0.1 playbrassmonkey.com`
 
-Setting it to 127.0.0.1 will make the flash games connect to localhost, aka the self-hosted server running on your computer.   
-The modified app will connect to `192.168.1.115` which will also connect to your computer after setting it to that.  
+Setting it to 127.0.0.1 will make the flash games connect to localhost, aka the self-hosted server running on your PC.   
+The modified app will connect to the IP address you set, which should be your PC's one.
 
-Then go to Step 5.
+Go to Step 5.
 
 ### Hard Way
 
 The hard way involves redirecting the default domains on your router.  
-If you have a router capable to do this, you don't need to use the modified app.  
-
-Firstly, find out your computer's private IP address.   
-
-#### Windows:
-
-Run `ipconfig` in a terminal or command prompt.   
-Look for the IPv4 address.   
-
-#### Linux:
-
-Run `ifconfig` in a terminal or command prompt.   
-Look for the IPv4 address.   
-
-#### macOS:
-
-Run `ifconfig` in a terminal or command prompt.   
-Look for the IPv4 address.   
- 
-It should be something like 192.168.1.100.  
-Make sure the private IP address is from your main network adapter.
+If you have a router capable to do this, you don't need to use the modified app.
 
 You need to redirect the following domains to your computer's private IP address:  
 `registry.monkeysecurity.com`   
 `playbrassmonkey.com`
 
-Then go to Step 5.
+Go to Step 5.
 
 # Step 5
 
 ## Playing games
 
-Download the latest release.  
 Run the server on your computer:
 
 Run `python3 start_servers.py` in a terminal or command prompt. 
+
+Run a game from the trusted directory.
 
 If you see something like:  
 For games:  
