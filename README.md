@@ -4,6 +4,9 @@
 
 
 # retouched
+
+**Development in this repository is on hold because a better server is in development in private. This repository will be archived once it's released.**  
+
 A recreation of Nitrome Touchy and the BrassMonkey server.    
 **This is not an officially supported Ntrome Ltd. or Infrared5 Inc. product.**
 
@@ -23,7 +26,7 @@ See the [LICENSE](LICENSE) file for details.
 Images in this repository are licensed under the Creative Commons Attribution 4.0 International License.  
 See the [LICENSE-IMAGES.md](LICENSE-IMAGES.md) file for details.
 
-Copyright © 2025 ddavef/KinteLiX  
+Copyright © 2026 ddavef/KinteLiX  
 Both ddavef and KinteLiX refer to the same individual.
 
 ## Credits
