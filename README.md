@@ -5,7 +5,8 @@
 
 # retouched
 
-**Development in this repository is on hold because a better server is in development in private. This repository will be archived once it's released.**  
+**This repository has been archived.**
+**You can find the next generation of this project [here](https://github.com/Retouched-Project).**
 
 A recreation of Nitrome Touchy and the BrassMonkey server.    
 **This is not an officially supported Ntrome Ltd. or Infrared5 Inc. product.**
